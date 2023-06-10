@@ -1,0 +1,193 @@
+ /*Yazı fontunu fonts.google.com dan ekleme
+  fonts.google.com->select font->add by selecting->choose import radio button->import to the local css
+  */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;0,700;1,700&display=swap');
+  /*fontları indirerek de işlemleri yapabiliriz. fonts.google.com dan fontun zip halini indir
+  zip dosyasını aç-->folder altındaki static altfolderını, monserrat olarak rename et-->monserrat foler ını, assets\fonts altına al
+  veya vscode içerisinde assets\fonts\monserrat folderı içerisine kopyala
+  */
+  @font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-Medium.ttf);
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-Bold.ttf);
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-Light.ttf);
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-Regular.ttf);
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: Montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-SemiBold.ttf);
+    font-weight:600 ;
+  }
+  *{
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+    color: #424242;
+  }
+body{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app__header{
+    /* border: solid 5px red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;/*yatayda ortala*/
+    align-items: center;/*dikeyde ortala*/
+    height: 81px;
+}
+.app_links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.app_links li{
+    margin-right: 1.5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+.app_links li.active{
+    color: #5A47AB;
+    font-weight: 600;
+}
+.app__title{
+    margin-right: 1rem;
+}
+.app_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.app__showcase{
+    border: solid 2px red;
+    display: flex;
+    margin: 5rem 0;
+}
+.app__showcase-info{
+    flex: 6;
+    padding: 0 3rem;
+}
+.app__showcase-info h1,h3{
+    font-size: 52px;
+}
+.app__showcase-info h1{
+    color: #D05270;
+    font-weight: bold;
+}
+.app__showcase-info h3{
+    font-weight: 500;
+}
+.app__showcase-info p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.app__showcase-image{
+    flex: 4;
+    padding: 0 3rem;
+}
+.app__links{
+display: flex;
+justify-content: space-between;/*app__links i sağa ve sola daya, aralarında eşit miktarda boşluk bırak*/
+margin-top: 3rem;
+}
+.app__links .app__link{
+    color:white;
+    font-size: 12px;
+    width: 30%;
+    height: 60px;
+    text-decoration:none ;/*linklerin altındaki çizgileri kaldırır*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.app__links .app__link img{
+    margin-right: 2em;
+}
+.app__links .app__link.twitter{/*app__links altında app__link yanında twitter*/
+background-color: #47ACDF;
+}
+
+.app__links .app__link.linkedin{/*app__links altında app__link yanında linkedin*/
+background-color: #1275B1;
+}
+
+.app__links .app__link.medium{/*app__links altında app__link yanında medium*/
+background-color: black;
+}
+.app__blog-categories{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+.app__blog-categories .item{
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.app__blog-categories .item.active{
+    color: #D05270;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 1px solid #D05270 ;
+    padding: 0 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.app__post-list{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+.app__post-card{
+    display: flex;
+    flex:0 0 50%;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 3rem 0;
+    justify-content: space-around;
+}
+.post-date{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+.post-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #D05270;
+    margin: 0.5rem 0;
+}
+.post-info{
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+.post-link{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #D05270;
+    border-bottom: 1px solid #D05270;
+    padding-bottom: 5px;
+    width: fit-content;
+    margin-top: 2rem;
+}
+.post-image{
+    height: 400px;
+    width: max-content;
+}
