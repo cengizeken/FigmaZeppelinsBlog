@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-   <nav class="app__header">
-    <a class="app_logo" href="">
-        <img class="app__title"src="./assets/images/app-logo.svg">
-        <img class="purple__logo" src="./assets/images/HireMe.svg">
-    </a>
-    <ul class="app_links">
-        <li>PORTFOLIO</li>
-        <li class="active">BLOG</li>
-        <li>CV</li>
-        <li>FREELANCE</li>
-        <li>ABOUT ME</li>
-        <li>CONTACT</li>
-    </ul>
-   </nav>
+    <nav class="app__header">
+        <a class="app_logo" href="">
+          <img class="app__title" src="./assets/images/app-logo.svg" />
+          <img class="app__title2" src="./assets/images/app_logo2.svg" />
+          <img class="purple__logo" src="./assets/images/HireMe.svg" width="100"/>
+        </a>
+        <img class="menu__collapse" src="./assets/images/menu_open_icon.svg" alt="">
+        <div class="menu-container">
+            <ul class="menu-items">
+                <li>PORTFOLIO</li>
+                <li class="active">BLOG</li>
+                <li>CV</li>
+                <li>STORE</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+              </ul>
+        </div>
+        
+      </nav>
    <main>
     <div class="app__showcase">
         <div class="app__showcase-info">
@@ -49,7 +54,10 @@
     </ul>
     <div class="app__post-list">
          <div class="app__post-card">
-            <img class="post-image" src="./assets/images/post-1.svg" alt="">
+            <a href="/post_detail.html">
+                <img class="post-image" src="./assets/images/post-1.svg" alt="">
+            </a>
+            
             <strong class="post-date">NOV 23 2020</strong>
             <h3 class="post-title">This way is wrong about UI Design.</h3>
             <p class="post-info">A quick guide to assisting users in the challenging steps from learning 
@@ -77,5 +85,9 @@
          </div>
     </div>
    </main>
+   <footer class="footer">
+    <img src="./assets/images/footer_logo.svg" alt="">
+   </footer>
+   <script src="./app.js"></script>
 </body>
 </html>

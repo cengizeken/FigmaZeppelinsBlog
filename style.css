@@ -49,27 +49,33 @@ body{
     align-items: center;/*dikeyde ortala*/
     height: 81px;
 }
-.app_links{
+.menu-items{
     list-style: none;
     display: flex;
     flex-direction: row;
 }
-.app_links li{
+.menu-items li{
     margin-right: 1.5rem;
     font-size: 14px;
     font-weight: 500;
 }
-.app_links li.active{
+.menu-items li.active{
     color: #5A47AB;
     font-weight: 600;
 }
 .app__title{
     margin-right: 1rem;
 }
+.app__title2{
+    display: none;
+}
 .app_logo{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.menu__collapse{
+    display: none;
 }
 .app__showcase{
     border: solid 2px red;
@@ -82,6 +88,7 @@ body{
 }
 .app__showcase-info h1,h3{
     font-size: 52px;
+    margin: 0;
 }
 .app__showcase-info h1{
     color: #D05270;
@@ -115,7 +122,7 @@ margin-top: 3rem;
 
 }
 .app__links .app__link img{
-    margin-right: 2em;
+    margin-right: 2rem;
 }
 .app__links .app__link.twitter{/*app__links altında app__link yanında twitter*/
 background-color: #47ACDF;
@@ -190,4 +197,138 @@ background-color: black;
 .post-image{
     height: 400px;
     width: max-content;
+}
+.footer{
+position: relative;
+text-align: center;
+margin: 5rem 0;
+}
+
+@media only screen and (max-width:850px) {
+    body{
+        width:90%;
+        margin:auto;
+    }
+    .menu-container
+    {
+        /* display: none; */
+        position: absolute;
+        opacity: 0;
+        left: 0%;
+        top: 10%;
+        width: 100%;
+        height: 0%;
+        background-color: white;
+        transition: height 250ms ease-in-out;
+    }
+    .menu-container.active{
+        height: 100%;
+        opacity: 1;
+
+    }
+    .menu-items{
+        /* display: none; */
+        /* margin-top: 30rem; */
+        
+        /* z-index: 1; */
+        flex-direction: column;
+        
+        
+    }
+    .menu-items li{
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+    .menu__collapse{
+        display: block;
+    }
+    .app__title2{
+        display: block;
+        margin-right: 1rem;
+    }
+    .app__title{
+        display: none;
+    }
+    .app__showcase{
+        border: solid 2px red;
+        display: flex;
+        margin: 5rem 0;
+    }
+    .app__showcase-info{
+        /* flex: 6; */
+        padding: 0;
+    }
+    .app__showcase-info h1,h3{
+        font-size: 20px;
+        margin: 0;
+        color: #D05270;
+        font-weight: bold;
+    }
+
+    .app__showcase-info h3{
+        color: #424242;
+        font-weight: 500;
+    }
+    .app__showcase-info p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .app__showcase-image{
+        display: none;
+    }
+
+    .app__links{
+        flex-direction: row;
+        }
+    .app__links .app__link{
+        /* color:white; */
+        font-size: 12px;
+        font-weight: 500;  
+        height: 40px;  
+    }
+    .app__links .app__link img{
+        margin-right: 0.5rem;
+    }
+    .app__blog-categories{
+        overflow-x: auto;
+        padding: 0;
+    }
+    .app__blog-categories .item{
+        font-weight: 600;
+        font-size: 12px;
+        margin-right: 1rem;
+        white-space: nowrap;
+    }
+    
+    .app__blog-categories .item.active{
+        font-size: 14px;
+    }
+
+    .app__post-list{
+        display: flex;
+        flex-direction: row ;
+        flex-wrap: wrap;
+    }
+    .app__post-card{
+        margin: 1rem 0;
+    }
+    .post-date{
+        font-size: 10px;
+        font-weight: 600;
+   
+    }
+    .post-title{
+        font-size: 20px;
+    }
+    .post-info{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .post-link{
+        font-size: 14px;
+
+    }
+    .post-image{
+        height: 200px;
+    }
 }
